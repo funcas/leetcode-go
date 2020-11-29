@@ -19,7 +19,7 @@ func solve(board [][]byte) bool {
 		for j := 0; j < 9; j++ {
 			if board[i][j] == '.' {
 				for c := '1'; c <= '9'; c++ {
-					if isValid(board, i, j, byte(c)) {
+					if isValidSD(board, i, j, byte(c)) {
 						board[i][j] = byte(c)
 						if solve(board) {
 							return true
@@ -35,7 +35,7 @@ func solve(board [][]byte) bool {
 	return true
 }
 
-func isValid(board [][]byte, row int, col int, c byte) bool {
+func isValidSD(board [][]byte, row int, col int, c byte) bool {
 	for i := 0; i < 9; i++ {
 		if board[i][col] != '.' && board[i][col] == c {
 			return false
