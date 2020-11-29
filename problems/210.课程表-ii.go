@@ -1,3 +1,5 @@
+package problems
+
 /*
  * @lc app=leetcode.cn id=210 lang=golang
  *
@@ -65,4 +67,3 @@ func (graph *Graph) topoSortByKahn() []int {
 }
 
 // @lc code=end
-

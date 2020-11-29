@@ -1,3 +1,5 @@
+package problems
+
 /*
  * @lc app=leetcode.cn id=463 lang=golang
  *
@@ -31,4 +33,3 @@ func islandPerimeter(grid [][]int) int {
 }
 
 // @lc code=end
-
