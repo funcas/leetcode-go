@@ -15,7 +15,7 @@ package problems
  *     Right *TreeNode
  * }
  */
-func maxDepth(root *TreeNode) int {
+func maxDepth104(root *TreeNode) int {
 	maxDepth := 0
 	if root == nil {
 		return maxDepth

@@ -15,7 +15,7 @@ type RandomizedCollection struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor() RandomizedCollection {
+func Constructor_() RandomizedCollection {
 	return RandomizedCollection{
 		m: make(map[int]map[int]struct{}),
 	}
@@ -74,4 +74,3 @@ func (this *RandomizedCollection) GetRandom() int {
  * param_3 := obj.GetRandom();
  */
 // @lc code=end
-

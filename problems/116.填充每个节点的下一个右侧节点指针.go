@@ -17,15 +17,15 @@ package problems
  * }
  */
 
-func connect(root *Node) *Node {
+func connect(root *Node2) *Node2 {
 	if root == nil {
 		return nil
 	}
-	queue := []*Node{root}
+	queue := []*Node2{root}
 
 	for len(queue) != 0 {
 		size := len(queue)
-		tmp := make([]*Node, 0)
+		tmp := make([]*Node2, 0)
 		for i := 0; i < size; i++ {
 			if i+1 < size {
 				queue[i].Next = queue[i+1]

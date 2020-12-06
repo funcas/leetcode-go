@@ -5,13 +5,17 @@ type ListNode struct {
 	Next *ListNode
 }
 
-type Node struct {
+type Node2 struct {
 	Val   int
-	Left  *Node
-	Right *Node
-	Next  *Node
+	Left  *Node2
+	Right *Node2
+	Next  *Node2
 }
 
+type Node struct {
+	Val      int
+	Children []*Node
+}
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
