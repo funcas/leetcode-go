@@ -9,24 +9,23 @@ package problems
 // @lc code=start
 func detectCapitalUse(word string) bool {
 
-	for i := 2; i < len(word); i++ {
-		if word[0] <= 'Z' && word[1] <= 'Z' {
-			if word[i] > 'Z' {
-				return false
-			}
-		} else if word[0] <= 'Z' && word[1] > 'Z' {
-			if word[i] <= 'Z' {
-				return false
-			}
-		} else if word[0] > 'Z' && word[1] > 'Z' {
-			if word[i] <= 'Z' {
-				return false
-			}
-		} else {
-			return false
+	n := len(word)
+	count := 0
+	for i := 0; i < n; i++ {
+		if word[i] >= 65 && word[i] <= 90 {
+			count++
 		}
 	}
-	return true
+	if n == count {
+		return true
+	} else if count == 0 {
+		return true
+	} else if count == 1 && (word[0] >= 65 && word[0] <= 90) {
+		return true
+	} else {
+		return false
+	}
+
 }
 
 // @lc code=end
